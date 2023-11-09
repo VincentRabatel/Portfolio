@@ -1,0 +1,68 @@
+@import './statics';
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Lato';
+}
+
+body {
+    max-width: 1280px;
+    margin: auto;
+    
+    color: $color-text-main;
+    background-color: $color-bg-main;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.header {
+    height: 100px;
+
+    margin-top: 30px;
+    margin-bottom: 0px;
+
+    &__title {
+        font-size: 80px;
+        font-weight: 600;
+        font-family: Anton;
+        color: $color-text-second;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    
+    margin-bottom: 30px;
+    
+    &__element {
+        font-size: 22px;
+        font-weight: 700;
+        color: $color-text-second;
+    }
+}
+
+.main-content {
+
+    p {
+        font-size: 18px;
+        color: $color-text-main;
+    }
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
