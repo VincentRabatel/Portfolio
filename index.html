@@ -20,22 +20,27 @@
 
 
         <!-- Scripts -->
-		<script type="module" src="./scripts/script.js"></script>
+		<script type="module" src="./assets/scripts/script.js"></script>
+		<script type="module" src="./assets/scripts/header.js"></script>
+		<script type="module" src="./assets/scripts/nav.js"></script>
     </head>
 
     <body>
         <!-- Header -->
         <header class="header">
-            <h1 class="header__title">VINCENT RABATEL</h1>
+            <div class="header__title-container">
+                <h1 class="header__title">VINCENT RABATEL</h1>
+            </div>
+
+            <nav>
+                <li class="nav">
+                    <ul class="nav__tab">Video Games</ul>
+                    <ul class="nav__tab">Experiments</ul>
+                    <ul class="nav__tab">Websites</ul>
+                </li>
+            </nav>
         </header>
         
-        <nav>
-            <li class="navbar">
-                <ul class="navbar__element">Video Games</ul>
-                <ul class="navbar__element">Experiments</ul>
-                <ul class="navbar__element">Websites</ul>
-            </li>
-        </nav>
 
         <!-- Main -->
         <main class="main-content">

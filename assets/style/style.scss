@@ -21,30 +21,55 @@ main {
 }
 
 .header {
-    height: 100px;
-
     margin-top: 30px;
-    margin-bottom: 0px;
 
+    // This strange container is mandatory,
+    // because the Anton font has a strange height
+    // and it causes problems with click and hovering effects 
+    &__title-container {
+        margin-bottom: 20px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+        
     &__title {
         font-size: 80px;
         font-weight: 600;
-        font-family: Anton;
+        font-family: 'Anton';
         color: $color-text-second;
+
+        line-height: 80px;
+        
+        cursor: pointer;
+
+        &:hover {
+            color: $color-text-main;
+        }
     }
 }
 
-.navbar {
+.nav {
     display: flex;
-    flex-direction: row;
     column-gap: 16px;
     
     margin-bottom: 30px;
     
-    &__element {
+    &__tab {
         font-size: 22px;
         font-weight: 700;
         color: $color-text-second;
+
+        cursor: pointer;
+
+        &:hover {
+            color: $color-text-main;
+        }
+        
+        &--active {
+            color: $color-text-main;
+        }
     }
 }
 

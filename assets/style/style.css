@@ -17,28 +17,43 @@ main {
 }
 
 .header {
-  height: 100px;
   margin-top: 30px;
-  margin-bottom: 0px;
+}
+.header__title-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 .header__title {
   font-size: 80px;
   font-weight: 600;
-  font-family: Anton;
+  font-family: "Anton";
   color: #F40864;
+  line-height: 80px;
+  cursor: pointer;
+}
+.header__title:hover {
+  color: #FFFFFF;
 }
 
-.navbar {
+.nav {
   display: flex;
-  flex-direction: row;
   -moz-column-gap: 16px;
        column-gap: 16px;
   margin-bottom: 30px;
 }
-.navbar__element {
+.nav__tab {
   font-size: 22px;
   font-weight: 700;
   color: #F40864;
+  cursor: pointer;
+}
+.nav__tab:hover {
+  color: #FFFFFF;
+}
+.nav__tab--active {
+  color: #FFFFFF;
 }
 
 .main-content p {
