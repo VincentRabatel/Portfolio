@@ -5,15 +5,14 @@
 }
 
 body {
-  max-width: 1280px;
   margin: auto;
+  max-width: 1280px;
   color: #FFFFFF;
   background-color: #000000;
 }
 
 main {
-  max-width: 1000px;
-  margin: auto;
+  padding: 0px 120px;
 }
 
 .header {
@@ -24,6 +23,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: left;
+  text-decoration: none;
 }
 .header__title {
   font-size: 80px;
@@ -56,9 +56,20 @@ main {
   color: #FFFFFF;
 }
 
-.main-content p {
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.home__container p {
   font-size: 18px;
   color: #FFFFFF;
+}
+.home__preview {
+  width: 100%;
+  box-sizing: content-box;
 }
 
 .footer {
