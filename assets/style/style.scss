@@ -83,10 +83,7 @@ main {
     &__container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        row-gap: 20px;
+        align-items: flex-start;
     
         p {
             font-size: 18px;
@@ -97,9 +94,24 @@ main {
     &__preview {
         width: 100%;
         box-sizing: content-box;
+
+        margin-bottom: 20px;
+
+        transition: transform 200ms;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+
+        &--inactive {
+            display: none;
+        }
     }
 }
 
+.inactive {
+    display: none;
+}
 
 .footer {
     display: flex;
