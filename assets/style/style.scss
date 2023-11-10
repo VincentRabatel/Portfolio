@@ -8,21 +8,23 @@
 }
 
 body {
-    max-width: 1280px;
     margin: auto;
+    max-width: 1280px;
     
     color: $color-text-main;
     background-color: $color-bg-main;
 }
 
 main {
-    max-width: 1000px;
-    margin: auto;
+    padding: 0px 120px;
+    // max-width: 1000px;
+    // margin: auto;
 }
 
 .header {
     margin-top: 30px;
 
+    //todo
     // This strange container is mandatory,
     // because the Anton font has a strange height
     // and it causes problems with click and hovering effects 
@@ -32,6 +34,8 @@ main {
         display: flex;
         align-items: center;
         justify-content: left;
+        text-decoration: none;
+        
     }
         
     &__title {
@@ -41,6 +45,7 @@ main {
         color: $color-text-second;
 
         line-height: 80px;
+
         
         cursor: pointer;
 
@@ -73,13 +78,28 @@ main {
     }
 }
 
-.main-content {
+.home {
 
-    p {
-        font-size: 18px;
-        color: $color-text-main;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        row-gap: 20px;
+    
+        p {
+            font-size: 18px;
+            color: $color-text-main;
+        }
+    }
+
+    &__preview {
+        width: 100%;
+        box-sizing: content-box;
     }
 }
+
 
 .footer {
     display: flex;
