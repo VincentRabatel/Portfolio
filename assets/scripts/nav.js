@@ -1,10 +1,10 @@
 const navTabs = document.getElementsByClassName("nav__tab");
 
-const previews = document.getElementsByClassName("home__preview");
+const previews = document.getElementsByClassName("preview");
 
-const previewsGames = document.getElementsByClassName("home__preview--game");
-const previewsExperiments = document.getElementsByClassName("home__preview--experiment");
-const previewsWebsites = document.getElementsByClassName("home__preview--website");
+const previewsGames = document.getElementsByClassName("preview--videogame");
+const previewsExperiments = document.getElementsByClassName("preview--experiment");
+const previewsWebsites = document.getElementsByClassName("preview--website");
 
 
 initTabs();
@@ -70,7 +70,7 @@ function setPreviewActive(previews) {
     console.log("Activating these previews :", previews)
 
     for(let i = 0; i < previews.length; i++){
-        previews[i].classList.remove("home__preview--inactive");
+        previews[i].classList.remove("preview--inactive");
     }
 }
 
@@ -78,6 +78,6 @@ function setPreviewInactive(previews) {
     console.log("Desactivating these previews :", previews)
 
     for(let i = 0; i < previews.length; i++){
-        previews[i].classList.add("home__preview--inactive");
+        previews[i].classList.add("preview--inactive");
     }
 }

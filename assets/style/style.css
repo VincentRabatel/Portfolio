@@ -31,6 +31,7 @@ main {
   font-family: "Anton";
   color: #F40864;
   line-height: 80px;
+  transition: color 200ms;
   cursor: pointer;
 }
 .header__title:hover {
@@ -48,6 +49,7 @@ main {
   font-weight: 700;
   color: #F40864;
   cursor: pointer;
+  transition: color 200ms;
 }
 .nav__tab:hover {
   color: #FFFFFF;
@@ -56,29 +58,23 @@ main {
   color: #FFFFFF;
 }
 
-.home__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.home__container p {
-  font-size: 18px;
-  color: #FFFFFF;
-}
-.home__preview {
-  width: 100%;
-  box-sizing: content-box;
-  margin-bottom: 20px;
-  transition: transform 200ms;
-}
-.home__preview:hover {
-  transform: scale(1.01);
-}
-.home__preview--inactive {
-  display: none;
+.websites {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.inactive {
+.preview {
+  width: 100%;
+  transition: transform 200ms;
+}
+.preview:hover {
+  transform: scale(1.01);
+}
+.preview--videogame, .preview--experiment {
+  margin-bottom: 20px;
+}
+.preview--inactive {
   display: none;
 }
 
