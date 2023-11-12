@@ -12,7 +12,7 @@ body {
 }
 
 main {
-  padding: 0px 120px;
+  padding: 0px 140px;
 }
 
 .header {
@@ -113,7 +113,7 @@ main {
   margin-bottom: 20px;
 }
 .project__story {
-  max-width: 60%;
+  max-width: 70%;
   margin-bottom: 20px;
   font-size: 18px;
   font-style: italic;
@@ -127,6 +127,7 @@ main {
 
 .slideshow {
   position: relative;
+  margin-bottom: 20px;
 }
 .slideshow__slide {
   width: 100%;
@@ -155,6 +156,17 @@ main {
   top: 50%;
   right: 10px;
   transform: translate(0%, -50%);
+}
+
+.gridshow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.gridshow__item {
+  width: 100%;
 }
 
 .footer {

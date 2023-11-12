@@ -16,7 +16,7 @@ body {
 }
 
 main {
-    padding: 0px 120px;
+    padding: 0px 140px;
 }
 
 .header {
@@ -77,12 +77,13 @@ main {
     }
 }
 
+// Specificities of each sections
 .videogames {
-
+    //
 }
 
 .experiments {
-
+    //
 }
 
 .websites {
@@ -160,7 +161,7 @@ main {
 
     &__story {
         // width: 100%;
-        max-width: 60%;
+        max-width: 70%;
         margin-bottom: 20px;
         
         font-size: 18px;
@@ -178,6 +179,8 @@ main {
 
 .slideshow {
     position: relative;
+
+    margin-bottom: 20px;
 
     &__slide {
         width: 100%;
@@ -213,6 +216,19 @@ main {
     }
 }
 
+.gridshow {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // repeat(number of repeat, 1 fraction)
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    &__item {
+        width: 100%;
+    }
+}
 
 .footer {
     display: flex;
