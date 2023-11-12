@@ -78,17 +78,17 @@ main {
 }
 
 // Specificities of each sections
-.videogames {
-    //
-}
+// .videogames {
+//     
+// }
 
-.experiments {
-    //
-}
+// .experiments {
+//     
+// }
 
 .websites {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // repeat(number of repeat, 1 fraction)
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -101,6 +101,10 @@ main {
         transform: scale(1.01);
     }
     
+    &--inactive {
+        display: none;
+    }
+
     // Specificities of each categories
     &--videogame {
         margin-bottom: 20px;
@@ -109,15 +113,12 @@ main {
     &--experiment {
         margin-bottom: 20px;
     }
-
-    &--website {
-        //
-    }
     
-    &--inactive {
-        display: none;
-    }
+    // &--website {
+    //     
+    // }
 }   
+
 
 .project {
     display: flex;
@@ -218,12 +219,19 @@ main {
 
 .gridshow {
     width: 100%;
+    margin-bottom: 20px;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr); // repeat(number of repeat, 1 fraction)
-    gap: 10px;
 
-    margin-bottom: 20px;
+    &--4col {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    &--3col {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 
     &__item {
         width: 100%;
