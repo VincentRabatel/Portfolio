@@ -32,7 +32,6 @@ main {
   color: #F40864;
   line-height: 80px;
   transition: color 200ms;
-  cursor: pointer;
 }
 .header__title:hover {
   color: #FFFFFF;
@@ -98,6 +97,17 @@ main {
   gap: 20px;
   font-size: 16px;
 }
+.project__link {
+  color: #F40864;
+  text-decoration: none;
+}
+.project__link:visited {
+  color: #F40864;
+}
+.project__link:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
 .project__sshot {
   width: 100%;
   margin-bottom: 20px;
@@ -108,6 +118,11 @@ main {
   font-size: 18px;
   font-style: italic;
   text-align: center;
+}
+.project__youtube {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-bottom: 20px;
 }
 
 .footer {

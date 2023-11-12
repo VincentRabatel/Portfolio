@@ -45,8 +45,6 @@ main {
         line-height: 80px;
 
         transition: color 200ms;
-        
-        cursor: pointer;
 
         &:hover {
             color: $color-text-main;
@@ -140,6 +138,20 @@ main {
 
         font-size: 16px;
     }
+
+    &__link {
+        color: $color-text-second;
+        text-decoration: none;
+        
+        &:visited {
+            color: $color-text-second;
+        }
+        
+        &:hover {
+            color: $color-text-main;
+            text-decoration: none;
+        }
+    }
     
     &__sshot {
         width: 100%;
@@ -154,6 +166,13 @@ main {
         font-size: 18px;
         font-style: italic;
         text-align: center;
+    }
+
+    &__youtube {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+
+        margin-bottom: 20px;
     }
 }
 
