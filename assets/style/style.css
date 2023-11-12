@@ -60,8 +60,8 @@ main {
 
 .websites {
   display: grid;
-  gap: 20px;
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .preview {
@@ -71,11 +71,43 @@ main {
 .preview:hover {
   transform: scale(1.01);
 }
-.preview--videogame, .preview--experiment {
+.preview--videogame {
+  margin-bottom: 20px;
+}
+.preview--experiment {
   margin-bottom: 20px;
 }
 .preview--inactive {
   display: none;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.project__title-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.project__summary {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  font-size: 16px;
+}
+.project__sshot {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.project__story {
+  max-width: 60%;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
 }
 
 .footer {

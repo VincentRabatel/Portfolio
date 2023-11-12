@@ -17,8 +17,6 @@ body {
 
 main {
     padding: 0px 120px;
-    // max-width: 1000px;
-    // margin: auto;
 }
 
 .header {
@@ -91,9 +89,8 @@ main {
 
 .websites {
     display: grid;
+    grid-template-columns: repeat(3, 1fr); // repeat(number of repeat, 1 fraction)
     gap: 20px;
-    // repeat(number of repeat, 1 fraction)
-    grid-template-columns: repeat(3, 1fr);
 }
 
 .preview {
@@ -106,7 +103,11 @@ main {
     }
     
     // Specificities of each categories
-    &--videogame, &--experiment {
+    &--videogame {
+        margin-bottom: 20px;
+    }
+    
+    &--experiment {
         margin-bottom: 20px;
     }
 
@@ -118,6 +119,44 @@ main {
         display: none;
     }
 }   
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__title-img {
+        width: 100%;
+        margin-bottom: 20px;
+    } 
+    
+    &__summary {
+        margin-bottom: 20px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        font-size: 16px;
+    }
+    
+    &__sshot {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__story {
+        // width: 100%;
+        max-width: 60%;
+        margin-bottom: 20px;
+        
+        font-size: 18px;
+        font-style: italic;
+        text-align: center;
+    }
+}
+
 
 .footer {
     display: flex;
