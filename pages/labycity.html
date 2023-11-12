@@ -20,7 +20,8 @@
 
 
         <!-- Scripts -->
-		<script type="module" src="./assets/scripts/header.js"></script>
+		<script type="module" src="../assets/scripts/header.js"></script>
+		<script type="module" src="../assets/scripts/slideshow.js"></script>
     </head>
 
 
@@ -88,8 +89,8 @@
                     src="https://www.youtube.com/embed/-uJgCemnKno?si=TqEzPvXkxqimWyaI&amp;controls=0" 
                     title="Labyrinth City: Pierre the Maze Detective" 
                     frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
+                    <!-- allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  -->
                 </iframe>
                                 
                 <p class="project__story">
@@ -98,15 +99,19 @@
                     Without you, Opera City is doomed, as the Maze Stone has the power to turn everything around it into an intricate labyrinth.
                 </p>
                 
-                <img 
-                    class="project__sshot"
-                    src="../assets/images/pages/labycity/sshot_labycity-01.jpg"
-                    alt="">
-            
-                <!-- <img 
-                    class="project__sshot"
-                    src="../assets/images/pages/labycity/sshot_labycity-02.jpg"
-                    alt=""> -->
+                <div class="slideshow">
+                    <img class="slideshow__slide"
+                        src="../assets/images/pages/labycity/sshot_labycity-01.jpg"
+                        alt="">
+
+                    <div class="slideshow__arrow slideshow__arrow--left">
+                        << 
+                    </div>
+
+                    <div class="slideshow__arrow slideshow__arrow--right">
+                        >>
+                    </div>
+                </div>
 
             </article>    
         </main>
