@@ -19,7 +19,7 @@ main {
   margin-top: 30px;
 }
 .header__title-container {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -45,7 +45,7 @@ main {
   margin-bottom: 30px;
 }
 .nav__tab {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: #F40864;
   cursor: pointer;
@@ -61,7 +61,7 @@ main {
 .websites {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .preview {

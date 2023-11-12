@@ -22,8 +22,6 @@ function initTabs() {
         navTab.addEventListener('click', function(){
             setTabActive(navTab)
 
-            console.log(navTab.innerHTML)
-
             switch(navTab.innerHTML){
                 case "Video Games":
                     setPreviewActive(previewsGames)
@@ -67,7 +65,7 @@ function setTabInactive(navTab) {
 
 
 function setPreviewActive(previews) {
-    console.log("Activating these previews :", previews)
+    //console.log("Activating these previews :", previews)
 
     for(let i = 0; i < previews.length; i++){
         previews[i].classList.remove("preview--inactive");
@@ -75,7 +73,7 @@ function setPreviewActive(previews) {
 }
 
 function setPreviewInactive(previews) {
-    console.log("Desactivating these previews :", previews)
+    //console.log("Desactivating these previews :", previews)
 
     for(let i = 0; i < previews.length; i++){
         previews[i].classList.add("preview--inactive");

@@ -29,7 +29,7 @@ main {
     // because the Anton font has a strange height
     // and it causes problems with click and hovering effects 
     &__title-container {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         
         display: flex;
         align-items: center;
@@ -63,7 +63,7 @@ main {
     margin-bottom: 30px;
     
     &__tab {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 700;
         color: $color-text-second;
 
@@ -93,7 +93,7 @@ main {
     display: grid;
     gap: 20px;
     // repeat(number of repeat, 1 fraction)
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .preview {
