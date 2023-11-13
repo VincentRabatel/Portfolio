@@ -65,9 +65,10 @@ main {
 
         cursor: pointer;
 
-        transition: color 200ms;
+        transition: transform 300ms, color 200ms;
 
         &:hover {
+            transform: translate(1px, 1px);
             color: $color-text-main;
         }
         
@@ -75,21 +76,6 @@ main {
             color: $color-text-main;
         }
     }
-}
-
-// Specificities of each sections
-// .videogames {
-//     
-// }
-
-// .experiments {
-//     
-// }
-
-.websites {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
 }
 
 .preview {
@@ -100,7 +86,7 @@ main {
     &:hover {
         transform: scale(1.01);
     }
-    
+
     &--inactive {
         display: none;
     }
@@ -145,14 +131,16 @@ main {
         color: $color-text-second;
         text-decoration: none;
         
+        transition: color 200ms;
+
         &:visited {
             color: $color-text-second;
         }
-        
+
         &:hover {
             color: $color-text-main;
             text-decoration: none;
-        }
+        }        
     }
     
     &__sshot {
@@ -161,7 +149,6 @@ main {
     }
 
     &__story {
-        // width: 100%;
         max-width: 70%;
         margin-bottom: 20px;
         
@@ -237,7 +224,6 @@ main {
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
     }
-
 
     &__item {
         width: 100%;

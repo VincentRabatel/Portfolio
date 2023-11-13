@@ -48,19 +48,14 @@ main {
   font-weight: 700;
   color: #F40864;
   cursor: pointer;
-  transition: color 200ms;
+  transition: transform 300ms, color 200ms;
 }
 .nav__tab:hover {
+  transform: translate(1px, 1px);
   color: #FFFFFF;
 }
 .nav__tab--active {
   color: #FFFFFF;
-}
-
-.websites {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
 }
 
 .preview {
@@ -100,6 +95,7 @@ main {
 .project__link {
   color: #F40864;
   text-decoration: none;
+  transition: color 200ms;
 }
 .project__link:visited {
   color: #F40864;
