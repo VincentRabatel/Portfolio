@@ -4,6 +4,8 @@ import slidesWarp from "../data/slides_warp.js";
 const slideshow = document.querySelector(".slideshow");
 const slide = document.querySelector(".slideshow__slide");
 
+
+
 let slides;
 switch (slideshow.getAttribute("slides")) {
     case "slidesLabyCity":
@@ -16,6 +18,8 @@ switch (slideshow.getAttribute("slides")) {
 
     default: console.error("We didn't understand which slides we should be using here");
 }
+
+console.log(slides)
 
 const arrowLeft = document.querySelector(".slideshow__arrow--left")
 const arrowRight = document.querySelector(".slideshow__arrow--right")
