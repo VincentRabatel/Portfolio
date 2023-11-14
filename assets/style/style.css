@@ -86,6 +86,7 @@ main {
   margin-bottom: 20px;
 }
 .project__summary {
+  width: 100%;
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -173,6 +174,23 @@ main {
 }
 .gridshow__item {
   width: 100%;
+}
+
+.responsiveshow {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.responsiveshow__item--desktop {
+  width: 60.9%;
+}
+.responsiveshow__item--tablet {
+  width: 25.7%;
+}
+.responsiveshow__item--mobile {
+  width: 13.6%;
 }
 
 .footer {

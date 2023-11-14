@@ -118,6 +118,7 @@ main {
     } 
     
     &__summary {
+        width: 100%;
         margin-bottom: 20px;
 
         display: grid;
@@ -227,6 +228,26 @@ main {
 
     &__item {
         width: 100%;
+    }
+}
+
+.responsiveshow {
+    width: 100%; 
+    margin-bottom: 20px;
+    
+    display: flex; 
+    column-gap: 10px;
+
+    &__item {
+        &--desktop {
+            width: 60.9%;
+        }
+        &--tablet {
+            width: 25.7%;
+        }
+        &--mobile {
+            width: 13.6%;
+        }
     }
 }
 
