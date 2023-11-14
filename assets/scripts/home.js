@@ -2,19 +2,22 @@ const navTabs = document.getElementsByClassName("nav__tab");
 
 const previews = document.getElementsByClassName("preview");
 
-const previewsGames = document.getElementsByClassName("preview--videogame");
+const previewsVideogames = document.getElementsByClassName("preview--videogame");
 const previewsExperiments = document.getElementsByClassName("preview--experiment");
 const previewsWebsites = document.getElementsByClassName("preview--website");
+const about = document.querySelector(".about");
 
+console.log(about)
 
 initTabs();
 
 function initTabs() {
     setTabActive(navTabs[0])
-    setPreviewActive(previewsGames)
+    setPreviewActive(previewsVideogames)
     
     setPreviewInactive(previewsExperiments)
     setPreviewInactive(previewsWebsites)
+    about.classList.add("about--inactive")
 
     for(let i = 0; i < navTabs.length; i++){
         let navTab = navTabs[i];
@@ -24,25 +27,35 @@ function initTabs() {
 
             switch(navTab.innerHTML){
                 case "Video Games":
-                    setPreviewActive(previewsGames)
+                    setPreviewActive(previewsVideogames)
 
                     setPreviewInactive(previewsExperiments)
                     setPreviewInactive(previewsWebsites)
+                    about.classList.add("aboout--inactive")
                     break;
                 
                 case "Experiments":
                     setPreviewActive(previewsExperiments)
 
-                    setPreviewInactive(previewsGames)
+                    setPreviewInactive(previewsVideogames)
                     setPreviewInactive(previewsWebsites)
+                    about.classList.add("about--inactive")
                 break;
 
                 case "Websites":
                     setPreviewActive(previewsWebsites)
 
-                    setPreviewInactive(previewsGames)
+                    setPreviewInactive(previewsVideogames)
                     setPreviewInactive(previewsExperiments)
+                    about.classList.add("about--inactive")
                     break;
+
+                case "About":
+                    about.classList.remove("about--inactive")
+
+                    setPreviewInactive(previewsVideogames)
+                    setPreviewInactive(previewsExperiments)
+                    setPreviewInactive(previewsWebsites)
 
                 default :
                     console.error("We didnt find the previews to show")

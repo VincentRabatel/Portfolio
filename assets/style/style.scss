@@ -103,7 +103,13 @@ main {
     // &--website {
     //     
     // }
-}   
+}
+
+.about {
+    &--inactive {
+        display: none;
+    }
+}
 
 
 .project {

@@ -75,6 +75,10 @@ main {
   margin-bottom: 20px;
 }
 
+.about--inactive {
+  display: none;
+}
+
 .project {
   display: flex;
   flex-direction: column;
