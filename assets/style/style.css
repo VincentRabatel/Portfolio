@@ -17,9 +17,11 @@ main {
 
 .header {
   margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 .header__title-container {
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -30,11 +32,15 @@ main {
   font-weight: 600;
   font-family: "Anton";
   color: #F40864;
-  line-height: 80px;
+  line-height: 75px;
   transition: color 200ms;
 }
 .header__title:hover {
   color: #FFFFFF;
+}
+.header__logo {
+  width: 30px;
+  height: 30px;
 }
 
 .nav {
@@ -62,17 +68,23 @@ main {
   width: 100%;
   transition: transform 200ms;
 }
-.preview:hover {
-  transform: scale(1.01);
-}
 .preview--inactive {
   display: none;
 }
 .preview--videogame {
   margin-bottom: 20px;
 }
+.preview--videogame:hover {
+  transform: scale(1.01);
+}
 .preview--experiment {
   margin-bottom: 20px;
+}
+.preview--experiment:hover {
+  transform: scale(1.01);
+}
+.preview--website:hover {
+  transform: scale(1.02);
 }
 
 .about--inactive {

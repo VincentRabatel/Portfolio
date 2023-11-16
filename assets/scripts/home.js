@@ -31,7 +31,7 @@ function initTabs() {
 
                     setPreviewInactive(previewsExperiments)
                     setPreviewInactive(previewsWebsites)
-                    about.classList.add("aboout--inactive")
+                    about.classList.add("about--inactive")
                     break;
                 
                 case "Experiments":
