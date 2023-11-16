@@ -54,6 +54,12 @@ main {
         }
     }
 
+    &__logos-container {
+        display: flex;
+        align-items: flex-end;
+        column-gap: 10px;
+    }
+
     &__logo {
         width: 30px;
         height: 30px;

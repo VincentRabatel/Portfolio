@@ -38,6 +38,12 @@ main {
 .header__title:hover {
   color: #FFFFFF;
 }
+.header__logos-container {
+  display: flex;
+  align-items: flex-end;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
 .header__logo {
   width: 30px;
   height: 30px;
