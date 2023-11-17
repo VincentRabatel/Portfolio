@@ -7,21 +7,21 @@
     font-family: 'Lato';
 }
 
-.laptop-excluded {
+.laptop-hidden {
     @include laptop {
-        // display: none;
+        display: none;
     }
 }
 
-.tablet-excluded {
+.tablet-hidden {
     @include tablet {
-        // display: none;
+        display: none;
     }
 }
 
-.mobile-only {
+.mobile-hidden {
     @include mobile {
-        // display: none;
+        display: none;
     }
 }
 
@@ -37,7 +37,7 @@ main {
     padding: 0px 140px;
 
     @include tablet {
-        padding: 0px 60px;
+        padding: 0px 40px;
     }
 
     @include mobile {
@@ -59,11 +59,11 @@ a {
     column-gap: 20px;
 
     @include laptop {
-        padding: 0px 60px;
+        padding: 0px 40px;
     }
 
     @include tablet {
-        padding: 0px 60px;
+        padding: 0px 40px;
     }
 
     @include mobile {
@@ -94,8 +94,8 @@ a {
         }
 
         @include mobile {
-            font-size: 50px;
-            line-height: 45px;
+            font-size: 60px;
+            line-height: 55px;
         }
     }
 
@@ -116,6 +116,11 @@ a {
     &__logo {
         width: 30px;
         height: 30px;
+
+        @include tablet {
+            width: 25px;
+            height: 25px;
+        }
 
         @include mobile {
             width: 25px;
@@ -236,11 +241,33 @@ a {
         width: 100%;
         margin-bottom: 20px;
 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        display: flex;
+        column-gap: 20px;
+        
+        @include mobile {
+            row-gap: 20px;
+            flex-direction: column;
+        }
 
-        font-size: 16px;
+        &--left {
+            width: 50%;
+            font-size: 16px;
+
+            @include mobile {
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+
+        &--right {
+            width: 50%;
+            font-size: 16px;
+            
+            @include mobile {
+                font-size: 14px;
+                width: 100%;
+            }
+        }
     }
 
     &__link {
@@ -265,12 +292,21 @@ a {
     }
 
     &__story {
-        max-width: 70%;
+        width: 70%;
         margin-bottom: 20px;
 
         font-size: 18px;
         font-style: italic;
         text-align: center;
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include mobile {
+            width: 90%;
+            font-size: 16px;
+        }
     }
 
     &__youtube {
@@ -305,6 +341,16 @@ a {
 
             cursor: pointer;
 
+            @include tablet {
+                width: 75px;
+                font-size: 18px;
+            }
+
+            @include mobile {
+                width: 60px;
+                font-size: 18px;
+            }
+
             &--left {
                 position: absolute;
                 top: 50%; left: 0px;
@@ -315,6 +361,10 @@ a {
                 position: absolute;
                 top: 50%; right: 0px;
                 transform: translate(0%, -50%);
+
+                @include mobile {
+                    grid-template-columns: repeat(2, 1fr);
+                }
             }
         }
     }
@@ -328,16 +378,28 @@ a {
         &--2col {
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+
+            @include mobile {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
 
         &--3col {
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
+
+            @include mobile {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         &--4col {
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
+
+            @include mobile {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         &--5col {
@@ -348,6 +410,14 @@ a {
         &--6col {
             grid-template-columns: repeat(6, 1fr);
             gap: 10px;
+            
+            @include tablet {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         &__item {
@@ -360,15 +430,30 @@ a {
         margin-bottom: 20px;
 
         display: flex;
-        column-gap: 10px;
+        align-items: center;
+        justify-content: center;
+
+        column-gap: 15px;
+        
+        @include tablet {
+            column-gap: 20px;
+        }
+
+        @include mobile {
+            column-gap: 10px;
+        }
 
         &__img {
+            // padding: 10px;
+            
             &--desktop {
                 width: 60.9%;
             }
+
             &--tablet {
                 width: 25.7%;
             }
+
             &--mobile {
                 width: 13.6%;
             }
@@ -395,6 +480,10 @@ a {
 
             &--left {
                 text-align: end;
+            }
+    
+            @include mobile {
+                font-size: 14px;
             }
         }
     }
