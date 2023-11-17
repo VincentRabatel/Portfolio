@@ -7,38 +7,73 @@
     font-family: 'Lato';
 }
 
+.laptop-excluded {
+    @include laptop {
+        // display: none;
+    }
+}
+
+.tablet-excluded {
+    @include tablet {
+        // display: none;
+    }
+}
+
+.mobile-only {
+    @include mobile {
+        // display: none;
+    }
+}
+
 body {
     margin: auto;
     max-width: 1280px;
-    
+
     color: $color-text-main;
     background-color: $color-bg-main;
 }
 
 main {
     padding: 0px 140px;
+
+    @include tablet {
+        padding: 0px 60px;
+    }
+
+    @include mobile {
+        padding: 0px 20px;
+    }
+}
+
+a {
+    line-height: 0px;
 }
 
 .header {
     margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 0px;
 
     display: flex;
     justify-content: space-between;
-    //todo
-    // This strange container is mandatory,
-    // because the Anton font has a strange height
-    // and it causes problems with click and hovering effects 
-    margin-bottom: 10px;
+    column-gap: 20px;
+
+    @include laptop {
+        padding: 0px 60px;
+    }
+
+    @include tablet {
+        padding: 0px 60px;
+    }
+
+    @include mobile {
+        padding: 0px 20px;
+    }
 
     &__title-container {
-        
-        display: flex;
-        align-items: center;
-        justify-content: left;
         text-decoration: none;
-        
     }
-        
+
     &__title {
         font-size: 80px;
         font-weight: 600;
@@ -52,26 +87,67 @@ main {
         &:hover {
             color: $color-text-main;
         }
+
+        @include tablet {
+            font-size: 70px;
+            line-height: 65px;
+        }
+
+        @include mobile {
+            font-size: 50px;
+            line-height: 45px;
+        }
     }
 
     &__logos-container {
         display: flex;
         align-items: flex-end;
         column-gap: 10px;
+
+        @include tablet {
+            column-gap: 5px;
+        }
+
+        @include mobile {
+            column-gap: 5px;
+        }
     }
 
     &__logo {
         width: 30px;
         height: 30px;
+
+        @include mobile {
+            width: 25px;
+            height: 25px;
+        }
     }
 }
 
 .nav {
     display: flex;
     column-gap: 16px;
-    
+
     margin-bottom: 30px;
-    
+
+    @include laptop {
+        padding: 0px 60px;
+        margin-bottom: 20px;
+    }
+
+    @include tablet {
+        padding: 0px 60px;
+        margin-bottom: 20px;
+    }
+
+    @include mobile {
+        padding: 0px 20px;
+        margin-bottom: 10px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     &__tab {
         font-size: 20px;
         font-weight: 700;
@@ -79,15 +155,27 @@ main {
 
         cursor: pointer;
 
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
         transition: transform 300ms, color 200ms;
 
         &:hover {
             transform: translate(1px, 1px);
             color: $color-text-main;
         }
-        
+
         &--active {
             color: $color-text-main;
+        }
+
+        @include tablet {
+            font-size: 18px;
+        }
+
+        @include mobile {
+            font-size: 16px;
         }
     }
 }
@@ -107,22 +195,22 @@ main {
 
         &:hover {
             transform: scale(1.01);
-        }    
+        }
     }
-    
+
     &--experiment {
         margin-bottom: 20px;
 
         &:hover {
             transform: scale(1.01);
-        }    
+        }
     }
-    
+
     &--website {
         &:hover {
             transform: scale(1.02);
         }
-    
+
     }
 }
 
@@ -142,8 +230,8 @@ main {
     &__title-img {
         width: 100%;
         margin-bottom: 20px;
-    } 
-    
+    }
+
     &__summary {
         width: 100%;
         margin-bottom: 20px;
@@ -158,7 +246,7 @@ main {
     &__link {
         color: $color-text-second;
         text-decoration: none;
-        
+
         transition: color 200ms;
 
         &:visited {
@@ -166,11 +254,11 @@ main {
         }
 
         &:hover {
-            color: $color-text-main;
             text-decoration: none;
-        }        
+            color: $color-text-main;
+        }
     }
-    
+
     &__sshot {
         width: 100%;
         margin-bottom: 20px;
@@ -179,7 +267,7 @@ main {
     &__story {
         max-width: 70%;
         margin-bottom: 20px;
-        
+
         font-size: 18px;
         font-style: italic;
         text-align: center;
@@ -194,35 +282,35 @@ main {
 
     .slideshow {
         position: relative;
-    
+
         margin-bottom: 20px;
-    
+
         &__slide {
             width: 100%;
             height: 100%;
         }
-    
+
         &__arrow {
             width: 90px;
             height: 40px;
             position: absolute;
-    
+
             display: flex;
             align-items: center;
             justify-content: center;
-            
+
             font-size: 22px;
             font-weight: 700;
             background-color: rgba(0, 0, 0, 0.8);
-            
+
             cursor: pointer;
-    
+
             &--left {
                 position: absolute;
                 top: 50%; left: 0px;
                 transform: translate(0%, -50%);
             }
-            
+
             &--right {
                 position: absolute;
                 top: 50%; right: 0px;
@@ -234,29 +322,29 @@ main {
     .gridshow {
         width: 100%;
         margin-bottom: 20px;
-    
+
         display: grid;
-    
+
         &--2col {
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
-    
+
         &--3col {
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
-    
+
         &--4col {
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
         }
-    
+
         &--5col {
             grid-template-columns: repeat(5, 1fr);
             gap: 10px;
         }
-        
+
         &--6col {
             grid-template-columns: repeat(6, 1fr);
             gap: 10px;
@@ -266,14 +354,14 @@ main {
             width: 100%;
         }
     }
-    
+
     .responsiveshow {
-        width: 100%; 
+        width: 100%;
         margin-bottom: 20px;
-        
-        display: flex; 
+
+        display: flex;
         column-gap: 10px;
-    
+
         &__img {
             &--desktop {
                 width: 60.9%;
@@ -286,25 +374,25 @@ main {
             }
         }
     }
-    
+
     .annotation {
         width: 100%;
         margin-bottom: 20px;
-    
+
         display: flex;
         column-gap: 20px;
-    
+
         &__img {
             width: 65%;
         }
-    
+
         &__text {
             width: 35%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-    
+
             &--left {
                 text-align: end;
             }
@@ -318,7 +406,7 @@ main {
 
         &--20 {
             padding: 20px;
-        }       
+        }
     }
 }
 
