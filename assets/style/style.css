@@ -192,6 +192,14 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+.project .gridshow--5col {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.project .gridshow--6col {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
 .project .gridshow__item {
   width: 100%;
 }
