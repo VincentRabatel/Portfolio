@@ -152,12 +152,12 @@ a {
     margin-bottom: 30px;
 
     @include laptop {
-        padding: 0px 60px;
-        margin-bottom: 20px;
+        padding: 0px 40px;
+        margin-bottom: 30px;
     }
 
     @include tablet {
-        padding: 0px 60px;
+        padding: 0px 40px;
         margin-bottom: 20px;
     }
 
@@ -173,7 +173,7 @@ a {
         font-size: 20px;
         font-weight: 700;
         color: $color-text-second;
-
+        list-style-type: none;
         cursor: pointer;
 
         text-overflow: ellipsis;
