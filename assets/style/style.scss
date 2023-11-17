@@ -49,6 +49,22 @@ a {
     line-height: 0px;
 }
 
+.link {
+    color: $color-text-second;
+    text-decoration: none;
+
+    transition: color 200ms;
+
+    &:visited {
+        color: $color-text-second;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $color-text-main;
+    }
+}
+
 .header {
     margin-top: 30px;
     margin-bottom: 10px;
@@ -185,6 +201,32 @@ a {
     }
 }
 
+.videogames {
+    //
+}
+
+.experiments {
+    //
+}
+
+.websites {
+    width: 100%;
+    margin-bottom: 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .preview {
     width: 100%;
 
@@ -220,11 +262,29 @@ a {
 }
 
 .about {
+    padding: 0px 150px;
+
     &--inactive {
         display: none;
     }
-}
 
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    li {
+        padding-left: 30px;
+
+        font-size: 16px;
+        line-height: 22px;
+        list-style-type: none;
+    }
+}
 
 .project {
     display: flex;
@@ -267,22 +327,6 @@ a {
                 font-size: 14px;
                 width: 100%;
             }
-        }
-    }
-
-    &__link {
-        color: $color-text-second;
-        text-decoration: none;
-
-        transition: color 200ms;
-
-        &:visited {
-            color: $color-text-second;
-        }
-
-        &:hover {
-            text-decoration: none;
-            color: $color-text-main;
         }
     }
 
@@ -430,32 +474,24 @@ a {
         margin-bottom: 20px;
 
         display: flex;
-        align-items: center;
-        justify-content: center;
-
-        column-gap: 15px;
         
-        @include tablet {
-            column-gap: 20px;
-        }
-
-        @include mobile {
-            column-gap: 10px;
-        }
+        // A fixed column gap doesn't work as expected in Chrome 
+        // column-gap: 20px;
+        column-gap: 3%;
 
         &__img {
             // padding: 10px;
             
             &--desktop {
-                width: 60.9%;
+                width: 58.9%;
             }
 
             &--tablet {
-                width: 25.7%;
+                width: 23.7%;
             }
 
             &--mobile {
-                width: 13.6%;
+                width: 11.6%;
             }
         }
     }
@@ -506,8 +542,20 @@ a {
 
     &__content {
         margin-top: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 70px;
 
         font-size: 14px;
+        
+        @include tablet {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+    
+        @include mobile {
+            margin-top: 20px;
+            margin-bottom: 40px;
+
+            font-size: 12px;
+        }
     }
 }
