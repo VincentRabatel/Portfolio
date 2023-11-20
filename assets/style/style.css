@@ -206,7 +206,6 @@ a {
 
 .websites {
   width: 100%;
-  margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -246,10 +245,25 @@ a {
 }
 
 .about {
-  padding: 0px 150px;
+  padding: 0px 120px;
 }
 .about--inactive {
   display: none;
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .about {
+    padding: 0px 80px;
+  }
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .about {
+    padding: 0px 40px;
+  }
+}
+@media (max-width: 479px) {
+  .about {
+    padding: 0px 20px;
+  }
 }
 .about h2 {
   margin-bottom: 10px;
