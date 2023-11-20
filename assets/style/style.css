@@ -87,6 +87,8 @@ main {
 }
 .header__title-container {
   text-decoration: none;
+  display: flex;
+  align-items: flex-end;
 }
 .header__title {
   font-size: 80px;
@@ -144,6 +146,9 @@ main {
     width: 25px;
     height: 25px;
   }
+}
+.header__home {
+  padding-left: 20px;
 }
 
 .nav {
