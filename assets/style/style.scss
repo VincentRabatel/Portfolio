@@ -7,24 +7,6 @@
     font-family: 'Lato';
 }
 
-.laptop-hidden {
-    @include laptop {
-        display: none;
-    }
-}
-
-.tablet-hidden {
-    @include tablet {
-        display: none;
-    }
-}
-
-.mobile-hidden {
-    @include mobile {
-        display: none;
-    }
-}
-
 body {
     margin: auto;
     max-width: 1280px;
@@ -43,6 +25,28 @@ main {
 
     @include mobile {
         padding: 0px 20px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.laptop-hidden {
+    @include laptop {
+        display: none;
+    }
+}
+
+.tablet-hidden {
+    @include tablet {
+        display: none;
+    }
+}
+
+.mobile-hidden {
+    @include mobile {
+        display: none;
     }
 }
 
@@ -214,17 +218,21 @@ main {
 }
 
 .websites {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-
-    @include tablet {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    // The section is used to be "display: none;" by home.js
+    // so we use this container instead to create the grid
+    &__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     
-    @include mobile {
-        grid-template-columns: repeat(2, 1fr);
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
 
@@ -264,10 +272,6 @@ main {
 
 .about {
     padding: 0px 120px;
-
-    &--inactive {
-        display: none;
-    }
 
     @include laptop {
         padding: 0px 80px;

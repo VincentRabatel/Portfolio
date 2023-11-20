@@ -1,66 +1,96 @@
-const navTabs = document.getElementsByClassName("nav__tab");
+const navTabs = document.getElementsByClassName("nav__tab")
 
-const previews = document.getElementsByClassName("preview");
+const videogames = document.querySelector(".videogames")
+const experiments = document.querySelector(".experiments")
+const websites = document.querySelector(".websites")
+const about = document.querySelector(".about")
 
-const previewsVideogames = document.getElementsByClassName("preview--videogame");
-const previewsExperiments = document.getElementsByClassName("preview--experiment");
-const previewsWebsites = document.getElementsByClassName("preview--website");
-const about = document.querySelector(".about");
+const sections = [videogames, experiments, websites, about]
 
-console.log(about)
+// Previews, to be used later for animation ?
+// const previews = document.getElementsByClassName("preview")
 
-initTabs();
+// const previewsVideogames = document.getElementsByClassName("preview--videogame")
+// const previewsExperiments = document.getElementsByClassName("preview--experiment")
+// const previewsWebsites = document.getElementsByClassName("preview--website")
 
+initTabs()
 function initTabs() {
-    setTabActive(navTabs[0])
-    setPreviewActive(previewsVideogames)
-    
-    setPreviewInactive(previewsExperiments)
-    setPreviewInactive(previewsWebsites)
-    about.classList.add("about--inactive")
-
     for(let i = 0; i < navTabs.length; i++){
-        let navTab = navTabs[i];
+        let navTab = navTabs[i]
     
         navTab.addEventListener('click', function(){
             setTabActive(navTab)
 
             switch(navTab.innerHTML){
                 case "Video Games":
-                    setPreviewActive(previewsVideogames)
-
-                    setPreviewInactive(previewsExperiments)
-                    setPreviewInactive(previewsWebsites)
-                    about.classList.add("about--inactive")
+                    showSection(videogames)
+                    window.localStorage.setItem("activeTab", "Video Games")
                     break;
                 
                 case "Experiments":
-                    setPreviewActive(previewsExperiments)
-
-                    setPreviewInactive(previewsVideogames)
-                    setPreviewInactive(previewsWebsites)
-                    about.classList.add("about--inactive")
-                break;
+                    showSection(experiments)
+                    window.localStorage.setItem("activeTab", "Experiments")
+                    break;
 
                 case "Websites":
-                    setPreviewActive(previewsWebsites)
-
-                    setPreviewInactive(previewsVideogames)
-                    setPreviewInactive(previewsExperiments)
-                    about.classList.add("about--inactive")
+                    showSection(websites)
+                    window.localStorage.setItem("activeTab", "Websites")
                     break;
 
                 case "About":
-                    about.classList.remove("about--inactive")
-
-                    setPreviewInactive(previewsVideogames)
-                    setPreviewInactive(previewsExperiments)
-                    setPreviewInactive(previewsWebsites)
+                    showSection(about)
+                    window.localStorage.setItem("activeTab", "About")
+                    break;
 
                 default :
                     console.error("We didnt find the previews to show")
             }
         }, false);
+    }
+}
+
+initActiveTab()
+function initActiveTab() {
+    const activeTab = window.localStorage.getItem("activeTab");
+
+    switch (activeTab) {
+        case "Video Games":
+            setTabActive(navTabs[0])
+            showSection(videogames)
+            break;
+        
+        case "Experiments":
+            setTabActive(navTabs[1])
+            showSection(experiments)
+            break;
+
+        case "Websites":
+            setTabActive(navTabs[2])
+            showSection(websites)
+            break;
+
+        case "About":
+            setTabActive(navTabs[3])
+            showSection(about)
+            break;
+
+        default :
+            setTabActive(navTabs[0])
+            showSection(videogames)
+    }
+}
+
+// Deprecated, sections init is done in initActiveTab()
+// function initSections() {
+//     for(let i = 0; i < sections.length; i++){
+//         sections[i].classList.add("hidden")
+//     }
+// }
+
+function showSection(section) {
+    for(let i = 0; i < sections.length; i++){
+        sections[i] == section ? sections[i].classList.remove("hidden") : sections[i].classList.add("hidden")
     }
 }
 
@@ -74,21 +104,4 @@ function setTabActive(navTab) {
 
 function setTabInactive(navTab) {
     navTab.classList.remove("nav__tab--active");
-}
-
-
-function setPreviewActive(previews) {
-    //console.log("Activating these previews :", previews)
-
-    for(let i = 0; i < previews.length; i++){
-        previews[i].classList.remove("preview--inactive");
-    }
-}
-
-function setPreviewInactive(previews) {
-    //console.log("Desactivating these previews :", previews)
-
-    for(let i = 0; i < previews.length; i++){
-        previews[i].classList.add("preview--inactive");
-    }
 }
