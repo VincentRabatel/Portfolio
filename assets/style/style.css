@@ -196,6 +196,16 @@ main {
   transform: translate(1px, 1px);
   color: #f7f7f7;
 }
+.nav__tab a {
+  color: #F40864;
+  text-decoration: none;
+}
+.nav__tab a:visited {
+  color: #F40864;
+}
+.nav__tab a:hover {
+  color: #f7f7f7;
+}
 .nav__tab--active {
   color: #f7f7f7;
 }
@@ -227,6 +237,11 @@ main {
   }
 }
 
+.preview-container {
+  display: block;
+  margin-bottom: 20px;
+}
+
 .preview {
   width: 100%;
   transition: transform 200ms;
@@ -234,14 +249,8 @@ main {
 .preview--inactive {
   display: none;
 }
-.preview--videogame {
-  margin-bottom: 20px;
-}
 .preview--videogame:hover {
   transform: scale(1.01);
-}
-.preview--experiment {
-  margin-bottom: 20px;
 }
 .preview--experiment:hover {
   transform: scale(1.01);

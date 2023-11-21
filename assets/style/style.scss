@@ -159,6 +159,8 @@ main {
 
     margin-bottom: 30px;
 
+    // list-style-type: none;
+
     @include laptop {
         padding: 0px 40px;
         margin-bottom: 30px;
@@ -195,6 +197,19 @@ main {
             color: $color-text-main;
         }
 
+        a {
+            color: $color-text-second;
+            text-decoration: none;
+
+            &:visited {
+                color: $color-text-second;
+            }
+
+            &:hover {
+                color: $color-text-main;
+            }
+        }
+    
         &--active {
             color: $color-text-main;
         }
@@ -236,6 +251,14 @@ main {
     }
 }
 
+// As preview containers are <a> markups,
+// we need a bit of css for these to shape correctly,
+// for example for navigation with TAB to work as expected 
+.preview-container {
+    display: block;
+    margin-bottom: 20px;
+}
+
 .preview {
     width: 100%;
 
@@ -247,16 +270,12 @@ main {
 
     // Specificities of each categories
     &--videogame {
-        margin-bottom: 20px;
-
         &:hover {
             transform: scale(1.01);
         }
     }
 
     &--experiment {
-        margin-bottom: 20px;
-
         &:hover {
             transform: scale(1.01);
         }
@@ -266,7 +285,6 @@ main {
         &:hover {
             transform: scale(1.02);
         }
-
     }
 }
 
